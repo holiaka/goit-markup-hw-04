@@ -1,0 +1,481 @@
+/* 
+************************
+* Basic styles
+************************  
+*/
+
+/* Variable */
+:root{
+    /* Text colors */
+    --full-black-text: #000000;
+    --full-white-text: #FFFFFF;
+    --nearby-white: #F5F4FA;
+    --gray-black-text: #212121;
+    --gray-text: #757575;
+
+    /* Universal blue color */
+    --blue-color: #2196F3;
+
+    /* Backgrounds colors */
+    --black-color-background: #2F303A;
+    --gray-background: #F5F4FA;
+    
+    /* Line color */
+    --ligth-gray-line: #ECECEC;
+
+    /* Border line color */
+    --gray-border-line: #EEEEEE;
+
+    /* Angle radius */
+    --radius: 4px;
+
+    /* Card gap`s distance */
+    --card-gap: 30px;
+
+    /* Number of cards in a row */
+    --card-numbers: 3;
+}
+
+/* Standard features */
+body{
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: var(--gray-text);
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* Delete all points near the list of items */
+.list{    
+    list-style: none;    
+}
+
+/* Remove from visible space */
+.none-visualisation {
+    visibility: hidden;
+}
+
+/* Remove standart decoration for links */
+.link{
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Global reset */
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+a,
+address{
+    padding: 0;
+    margin: 0;
+}
+
+/* Conteiner for elements */
+.container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hide element */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/* Images parameters */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features and calculation of "flex-containers" contents */
+.card-set{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+}
+
+.card-item{
+    flex-basis: calc((100% - (var(--card-numbers) - 1) * var(--card-gap)) / var(--card-numbers));
+}
+
+/* 
+************************
+* Class styles
+************************  
+*/
+
+/* Navigation panel */
+
+.header{
+    border-bottom: 1px solid var(--gray-border-line);
+
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+}
+
+.header-panel{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-panel{
+    display: flex;
+    align-items: center;
+    gap: 93px;
+}
+
+/* Logo */
+.logo{   
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--blue-color);
+    line-height: 1.19;
+    text-decoration: none;
+}
+
+.black-color-logo{
+    color: var(--full-black-text);
+}
+
+.black-color-logo:hover,
+.black-color-logo:focus{
+    color: var(--blue-color);
+}
+
+/* Header - navigator */
+
+.site-nav{
+    display: flex;    
+    gap: 50px;
+
+    color: var(--gray-black-text); 
+}
+
+.site-nav .link,
+.contact .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+
+.site-nav .link.current,
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contact .link:hover,
+.contact .link:focus{
+    color: var(--blue-color);
+}
+
+/* Header - contacts */
+.contact{
+    display: flex;
+    gap: 50px;
+    align-self: center;
+
+    margin-left: auto;   
+}
+
+/* Footer */
+.footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--black-color-background);
+}
+
+.white-text-logo{
+    color: var(--full-white-text);
+}
+
+.white-text-logo:hover,
+.white-text-logo:focus {
+    color: var(--blue-color);
+}
+
+.footer-logo{
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer-address{
+    font-style: normal;
+}
+
+/* .dev-data{    
+} */
+
+.dev-data-item:not(:last-child){
+    display: block;
+    margin-bottom: 9px;
+}
+
+.dev-adrress{
+    padding: 5px 0;
+    color: var(--full-white-text);
+}
+
+.dev-adrress:hover,
+.dev-adress:focus {
+    color: var(--gray-text)
+}
+
+.dev-contact{
+    padding: 5px 0;
+    color: rgba(255, 255, 255, 0.6);    
+}
+
+.dev-contact:hover,
+.dev-contact:focus{
+    color: var(--full-white-text)
+}
+
+/* 
+************************
+* index.html styles
+************************  
+*/
+
+/* ***Main sections*** */
+
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Hero section */
+.hero{
+    background-color: var(--black-color-background);
+    padding-top: 200px;
+    padding-bottom: 200px;    
+}
+
+/* .hero-content{} */
+
+
+.hero-title{
+    max-width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;    
+    color: var(--full-white-text);
+}
+
+.order-button{
+    min-width: 200px;
+    border-radius: var(--radius);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+
+    border: none;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+    color: var(--full-white-text);
+
+    background-color: var(--blue-color);
+
+    cursor: pointer;
+}
+
+.order-button:hover,
+.order-button:focus{
+    background-color: #188CE8;
+}
+
+/* Benefit section */
+/* .benefit{} */
+
+.benefit-list .card-item{
+    --card-numbers: 4;
+}
+
+.benefit-title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--gray-black-text)     
+}
+
+/* .benefit-discr{} */
+
+/* Work list and team sections*/
+.work{
+    padding-top: 0;
+}
+
+.team{
+    background-color: var(--gray-background);
+}
+
+.section-title{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--gray-black-text);
+}
+
+.team-content{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .card-item{
+    --card-numbers: 4;
+}
+
+.team-text{
+    padding: 30px;
+    text-align: center;
+    
+    background-color: var(--full-white-text);    
+}
+
+.team-name,
+.team-position{
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.team-name{
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    color: var(--gray-black-text);
+}
+
+/* 
+************************
+* portfolio.html styles
+************************  
+*/
+
+/* .portfolio{} */
+
+/* Colection parameters for filter bottons of Portfolio page */
+.filter-bottons{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+
+/* Filtration buttons for portfolio */
+.portfolio-buttons{
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    border-radius: var(--radius);
+    border-color: transparent;
+    
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--gray-black-text);
+
+    background-color: var(--nearby-white);
+
+    cursor: pointer;
+}
+
+.portfolio-buttons:hover,
+.portfolio-buttons:focus,
+.active-filter{
+    color: var(--full-white-text);
+
+    background-color: var(--blue-color);
+}
+
+/* Portfolio list */
+/* .portfolio-list{} */
+
+/* .portfolio-item{} */
+
+/* .portfolio-link{} */
+
+.portfolio-text{
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+
+    border-right: 1px solid var(--gray-border-line);
+    border-bottom: 1px solid var(--gray-border-line);
+    border-left: 1px solid var(--gray-border-line);
+}
+
+.portfolio-title{
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2.0;
+    letter-spacing: 0.06em;    
+    color: var(--gray-black-text);    
+}
+
+.portfolio-direction{    
+    font-size: 16px;
+    line-height: 1.88;    
+}
