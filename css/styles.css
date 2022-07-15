@@ -25,9 +25,11 @@
 
     /* Border line color */
     --gray-border-line: #EEEEEE;
+    --gray-company-color: #AFB1B8;
 
     /* Angle radius */
     --radius: 4px;
+    --full-round: 50%;
 
     /* Card gap`s distance */
     --card-gap: 30px;
@@ -178,7 +180,6 @@ img {
 
 .site-nav .link,
 .contact .link{
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -201,12 +202,28 @@ img {
     margin-left: auto;   
 }
 
+.contact-link{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.mail-icon,
+.telephone-icon{  
+    fill: currentColor;    
+}
+
 /* Footer */
 .footer{
     padding-top: 60px;
     padding-bottom: 60px;
 
     background-color: var(--black-color-background);
+}
+
+.footer-list{
+    display: flex;
+    gap: 70px;
 }
 
 .white-text-logo{
@@ -258,6 +275,26 @@ img {
     color: var(--full-white-text)
 }
 
+.conection-text{
+    display: inline-flex;
+    align-items: flex-end;
+    height: 27px;
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    
+    color: var(--full-white-text);
+    margin-bottom: 20px;
+}
+
+.social-item .footer-link{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon {
+    fill: var(--full-white-text);
+}
+
 /* 
 ************************
 * index.html styles
@@ -273,9 +310,17 @@ img {
 
 /* Hero section */
 .hero{
-    background-color: var(--black-color-background);
+    max-width: 1600px;    
     padding-top: 200px;
-    padding-bottom: 200px;    
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg/hero-bg.jpg);  
+    background-color: #C4C4C4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* .hero-content{} */
@@ -336,6 +381,23 @@ img {
     --card-numbers: 4;
 }
 
+.nearby-icon{
+    display: flex;
+    height: 120px;
+    border-radius: var(--radius);
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--gray-background);
+
+    margin-bottom: 10px;
+}
+
+.benefit-icon{    
+    width: 70px;
+    height: 70px;
+}
+
 .benefit-title {
     margin-bottom: 10px;
 
@@ -354,6 +416,10 @@ img {
 }
 
 .team{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
     background-color: var(--gray-background);
 }
 
@@ -392,12 +458,94 @@ img {
     text-align: center;
 }
 
+.team-position{
+    margin-bottom: 16px;
+}
+
 .team-name{
     margin-bottom: 10px;
 
     font-weight: 500;
     color: var(--gray-black-text);
 }
+
+.team-list{
+    display: flex;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--full-round);
+
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--blue-color);
+}
+
+.social-icon {
+    fill: var(--gray-company-color);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+    fill: var(--full-white-text);
+}
+
+/* Clients-list section */
+.clients-list .card-item {
+    --card-numbers: 6;
+}
+
+/* .clients-list{   
+} */
+
+.client-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-link{
+    display: flex;
+    height: 92px;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gray-company-color);
+    border-radius: var(--radius);
+}
+
+.client-link:hover,
+.client-link:focus{
+    border: 1px solid var(--blue-color);
+}
+
+.client-icon{
+    fill: var(--gray-company-color);    
+}
+
+.client-icon:hover,
+.client-icon:focus{
+    fill: var(--blue-color);
+}
+
+
+
+
 
 /* 
 ************************
@@ -445,14 +593,14 @@ img {
     color: var(--full-white-text);
 
     background-color: var(--blue-color);
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Portfolio list */
-/* .portfolio-list{} */
-
-/* .portfolio-item{} */
-
-/* .portfolio-link{} */
+.portfolio-cards .card-item:hover,
+.portfolio-cards .card-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-text{
     padding-top: 20px;

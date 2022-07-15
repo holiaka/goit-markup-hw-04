@@ -24,7 +24,7 @@
       <div class="container header-panel">                
         <!--Navigation panel-->
         <nav class="nav-panel">                
-          <!--Logo text and link-->
+            <!--Logo text and link-->
             <a class="logo" href=./index.html lang="en">Web<span class="black-color-logo">Studio</span></a>
 
             <!--Site naviagation list-->
@@ -43,12 +43,22 @@
 
         <ul class="contact list">
           <li>
-          <!--Contact e-mail-->
-            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <!--Contact e-mail-->            
+            <a class="link contact-link" href="mailto:info@devstudio.com">
+                <svg class="mail-icon" width="16" height="12">
+                    <use href="./images/icons/sprit-icons.svg#e-mail"></use>
+                </svg>
+                <p>info@devstudio.com</p>
+            </a>
           </li>
           <li>
             <!--Contact mob. tel.-->
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="link contact-link" href="tel:+380961111111">
+                <svg class="telephone-icon" width="10" height="16">
+                    <use href="./images/icons/sprit-icons.svg#mobile"></use>
+                </svg>
+                <p>+38 096 111 11 11</p>
+            </a>
           </li>
         </ul>
       </div>        
@@ -71,7 +81,7 @@
             </ul>
 
             <!-- Importance portfolio projects -->
-            <ul class="list card-set">
+            <ul class="portfolio-cards list card-set">
               <li class="card-item">
                 <a class="portfolio-link link" href="https://www.google.com/" target="_blank" rel="noreferrer noopener">
                   <img src="./images/portfolio-projects/portfolio-img1.jpg" alt="Вид страницы Технокряк" width="370" height="294">
@@ -161,23 +171,77 @@
     <!--Footer part-->
     <footer class="footer">
         <div class="container">
-            <!--Logo text and link-->
-            <a class="logo footer-logo" href=./index.html lang="en">Web<span class="white-text-logo">Studio</span></a>
-            <!--Address and develotment contacts-->
-            <address class="footer-address">
-                <ul class="list dev-data">
-                    <li class="dev-data-item">
-                        <a class="dev-adrress link" href="https://goo.gl/maps/GUnd78wBxHpprMvDA" target="_blank" rel="noreferrer noopener">г. Киев, пр-т Леси Украинки, 26</a>
-                    </li>
-                    <li class="dev-data-item">
-                        <a class="dev-contact link" href="mailto:info@example.com">info@example.com</a>
-                    </li>
-                    <li class="dev-data-item">
-                        <a class="dev-contact link" href="tel:+380991111111">+38 099 111 11 11</a>
-                    </li>
-                </ul>  
-            </address>
-
+            <ul class="list footer-list">
+                <!-- Left part of footer contacts -->
+                <li>
+                    <!--Logo text and link-->
+                    <a class="logo footer-logo" href=./index.html lang="en">Web<span class="white-text-logo">Studio</span></a>
+                    <!--Address and develotment contacts-->
+                    <address class="footer-address">
+                        <ul class="list dev-data">
+                            <li class="dev-data-item">
+                                <a class="dev-adrress link" href="https://goo.gl/maps/GUnd78wBxHpprMvDA" target="_blank" rel="noreferrer noopener">г. Киев, пр-т Леси Украинки, 26</a>
+                            </li>
+                            <li class="dev-data-item">
+                                <a class="dev-contact link" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="dev-data-item">
+                                <a class="dev-contact link" href="tel:+380991111111">+38 099 111 11 11</a>
+                            </li>
+                        </ul>  
+                    </address>
+                </li>
+                <!-- Right part of footer contacts-->
+                <li>
+                    <p class="conection-text">Присоединяйтесь</p>
+                    <ul class="list social-list">
+                                <li class="social-item">
+                                    <a class="footer-link social-link link" 
+                                    href="" 
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    aria-label="Инстаграм">
+                                        <svg class="footer-icon" width="20" height="20">
+                                            <use href="./images/icons/sprit-icons.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-link link" 
+                                    href="" 
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    aria-label="Твитер">
+                                        <svg class="footer-icon" width="20" height="20">
+                                            <use href="./images/icons/sprit-icons.svg#twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-link link" 
+                                    href="" 
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    aria-label="Фасебук">
+                                        <svg class="footer-icon" width="20" height="20">
+                                            <use href="./images/icons/sprit-icons.svg#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-link link" 
+                                    href="" 
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                    aria-label="ЛинкедИн">
+                                        <svg class="footer-icon" width="20" height="20">
+                                            <use href="./images/icons/sprit-icons.svg#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                     </ul>
+                </li>
+            </ul>            
         </div>
 
     </footer>
