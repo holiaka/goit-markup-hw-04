@@ -224,6 +224,7 @@ img {
 .footer-list{
     display: flex;
     gap: 70px;
+    align-items: baseline;
 }
 
 .white-text-logo{
@@ -276,9 +277,6 @@ img {
 }
 
 .conection-text{
-    display: inline-flex;
-    align-items: flex-end;
-    height: 27px;
     font-weight: 700;
     line-height: calc(16 / 14);
     text-transform: uppercase;
@@ -488,21 +486,19 @@ img {
     height: 44px;
     border-radius: var(--full-round);
 
-}
-
-.social-link:hover,
-.social-link:focus {
-    background-color: var(--blue-color);
-}
-
-.social-icon {
     fill: var(--gray-company-color);
 }
 
-.social-icon:hover,
-.social-icon:focus {
+.social-link:hover,
+.social-link:focus {    
+    background-color: var(--blue-color);
     fill: var(--full-white-text);
 }
+
+/* .social-icon {}
+
+.social-icon:hover,
+.social-icon:focus {} */
 
 /* Clients-list section */
 .clients-list .card-item {
@@ -512,39 +508,27 @@ img {
 /* .clients-list{   
 } */
 
-.client-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* .client-item{} */
 
 .client-link{
     display: flex;
-    height: 92px;
     width: 170px;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--gray-company-color);
+    border: 1px solid currentColor;
     border-radius: var(--radius);
+    color: var(--gray-company-color);
 }
 
 .client-link:hover,
 .client-link:focus{
-    border: 1px solid var(--blue-color);
+    color: var(--blue-color);
 }
 
 .client-icon{
-    fill: var(--gray-company-color);    
+    fill: currentColor;    
 }
-
-.client-icon:hover,
-.client-icon:focus{
-    fill: var(--blue-color);
-}
-
-
-
 
 
 /* 
@@ -597,10 +581,15 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-cards .card-item:hover,
-.portfolio-cards .card-item:focus{
+.portfolio-link{
+    display: block;    
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 
 .portfolio-text{
     padding-top: 20px;
